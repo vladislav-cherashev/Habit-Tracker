@@ -1,0 +1,35 @@
+{
+  "habits": [
+    {
+      "icon": "sport",
+      "name": "Много еды",
+      "target": 35,
+      "days": [
+        {
+          "comment": "первый день"
+        }
+      ],
+      "id": "e1930394-c341-4f15-8455-4280f753330f",
+      "createdAt": "8/1/2024, 7:53:49 AM",
+      "updatedAt": "8/2/2024, 8:40:43 AM"
+    },
+    {
+      "icon": "food",
+      "name": "еще покушать",
+      "target": 55,
+      "days": [],
+      "id": "6a7ccbc4-2c38-4ecc-ae0c-bab50f833a39",
+      "createdAt": "8/1/2024, 9:40:26 AM",
+      "updatedAt": "8/1/2024, 9:40:26 AM"
+    },
+    {
+      "icon": "sport",
+      "name": "1000 приседаний",
+      "target": 135,
+      "days": [],
+      "id": "11cfbc74-48eb-4d40-957f-555d4dd92794",
+      "createdAt": "8/2/2024, 10:14:17 AM",
+      "updatedAt": "8/2/2024, 10:14:17 AM"
+    }
+  ]
+}
