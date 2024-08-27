@@ -1,0 +1,52 @@
+h1 {
+  font-size:   30px;
+  line-height: 33px;
+  color:       #000000;
+}
+
+.header {
+  color:           #232360;
+  font-size:       14px;
+  font-weight:     400;
+  display:         flex;
+  justify-content: space-between;
+}
+
+.progress {
+  display:        flex;
+  flex-direction: column;
+  gap:            12px;
+}
+
+.progress-text {
+  display:         flex;
+  justify-content: space-between;
+}
+
+.progress-percent {
+  color:       #768396;
+  font-size:   12px;
+  font-weight: 400;
+}
+
+.progress-name {
+  color:        #232360;
+  font-size:    14px;
+  margin-right: 127px;
+}
+
+.progress-bar {
+  width:         100%;
+  height:        5px;
+  border-radius: 4px;
+  background:    #E6E9ED;
+  position:      relative;
+}
+
+.progress-cover-bar {
+  position:      absolute;
+  transition:    all 0.7s;
+  height:        5px;
+  border-radius: 4px;
+  background:    #5051F9;
+}

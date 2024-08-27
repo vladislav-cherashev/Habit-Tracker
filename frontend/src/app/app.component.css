@@ -1,0 +1,17 @@
+.body{
+  display: flex;
+  background: #EDECFE;
+}
+
+.main-content-side-menu{
+  display: flex;
+  flex-direction: row;
+}
+
+.main-content{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  min-width: 900px;
+  padding:   45px;
+}

@@ -1,0 +1,60 @@
+.panel {
+  min-height: 100vh;
+  background: white;
+  padding:    30px;
+}
+
+.menu {
+  display:        flex;
+  flex-direction: column;
+  gap:            25px;
+  align-items:    center;
+}
+
+.menu-list {
+  display:        flex;
+  flex-direction: column;
+  gap:            25px;
+  align-items:    center;
+}
+
+.menu-button-active {
+  background: #5051F9;
+}
+
+.menu-button-active img {
+  filter: brightness(0) invert(1);
+}
+
+.menu-button:hover {
+  background: #6A6AFB;
+}
+
+.menu-button:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.menu-button {
+  border: 1px solid #5051F9;
+  border-radius: 14px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.menu-add {
+  background:    none;
+  border-radius: 14px;
+  border:        1px solid #CAD5FF;
+  height:        45px;
+  width:         45px;
+  cursor:        pointer;
+}
+
+.menu-add:hover {
+  background: #F3F6FD;
+}
