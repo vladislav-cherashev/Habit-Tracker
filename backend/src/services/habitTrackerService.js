@@ -7,8 +7,8 @@ const getAllHabits = () => {
 };
 
 const getOneHabit = ( habitId ) => {
-    const workout = habit.getOneHabit( habitId );
-    return workout;
+    const oneHabit = habit.getOneHabit( habitId );
+    return oneHabit;
 };
 
 const createNewHabit = ( newHabit ) => {
@@ -29,11 +29,11 @@ const createNewHabit = ( newHabit ) => {
 };
 
 const updateOneHabit = ( habitId, changes ) => {
-    const updatedWorkout = habit.updateOneHabit(
+    const updatedHabit = habit.updateOneHabit(
         habitId,
         changes
     );
-    return updatedWorkout;
+    return updatedHabit;
 };
 
 const deleteOneHabit = ( habitId ) => {

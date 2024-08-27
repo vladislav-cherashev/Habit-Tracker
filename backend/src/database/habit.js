@@ -30,22 +30,24 @@ const getOneHabit = ( habitId ) => {
 }
 
 const updateOneHabit = ( habitId, changes ) => {
-    const indexForUpdate = DB.habits.findIndex(
-        ( habit ) => habit.id === habitId
-    );
-    if( indexForUpdate === -1 ) {
+    const index = DB.habits.findIndex( habit => {
+        return habit.id === habitId;
+    } );
+    if( index === -1 ) {
         return res.send( 'habit not found' );
     }
-    const updatedWorkout = {
-        ...DB.habits[ indexForUpdate ],
+
+    const updatedHabit = {
+        ...DB.habits[ index ],
         ...changes,
         updatedAt: new Date().toLocaleString( 'en-US', {
             timeZone: 'UTC',
         } ),
     };
-    DB.habits[ indexForUpdate ] = updatedWorkout;
+
+    DB.habits[ index ] = updatedHabit;
     saveToDatabase( DB );
-    return updatedWorkout;
+    return updatedHabit;
 };
 
 const deleteOneHabit = ( habitId ) => {
