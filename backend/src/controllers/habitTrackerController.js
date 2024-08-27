@@ -47,21 +47,21 @@ const createNewHabit = ( req, res ) => {
 const updateOneHabit = ( req, res ) => {
     const {
         body,
-        query: { habitId },
+        params: { habitId },
     } = req;
     if( !habitId ) {
         return res.send( 'No habitId' );
     }
-    const updatedWorkout = habitService.updateOneHabit(
+    const updatedHabit = habitService.updateOneHabit(
         habitId,
         body
     );
-    res.send( { status: 'OK', data: updatedWorkout } );
+    res.send( updatedHabit );
 };
 
 const deleteOneHabit = ( req, res ) => {
     const {
-        query: { habitId },
+        params: { habitId },
     } = req;
     if( !habitId ) {
         return res.send( 'No habitId' );
