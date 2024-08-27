@@ -1,0 +1,15 @@
+<body class="body">
+  <div class="panel">
+    <img class="logo" [src]="logo" alt="Трэкер привычек"/>
+    <nav class="menu" *ngIf="habits">
+      <div id="side-menu" class="menu-list" *ngFor="let habit of habits">
+        <button id="{{habit.id}}" class="menu-button " (click)="onHabitSelectClick($event)">
+          <img src="../../../assets/images/{{habit.icon}}.svg" [alt]="habit.name">
+        </button>
+      </div>
+      <button id="button-add" class="menu-add">
+        <img [src]="addBtn" alt="Добавить">
+      </button>
+    </nav>
+  </div>
+</body>

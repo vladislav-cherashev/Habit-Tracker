@@ -1,0 +1,19 @@
+<main id="mainContent" class="main">
+  <div id="days">
+    <div class="habit" *ngFor="let day of days">
+      <div class="habit-day">{{ 'День ' + day.number }}</div>
+      <div class="habit-comment">{{ day.comment }}</div>
+      <button [id]="day.number" #deleteBtn class="habit-delete-button" (click)="onDeleteDayButtonClick(day.number)">
+        <img [src]="delete" alt="Удалить день 2">
+      </button>
+    </div>
+  </div>
+  <div class="habit">
+    <div id="next-day" class="habit-day">{{ 'День ' + nextDay }}</div>
+    <form [formGroup]="formGroup" (ngSubmit)="addDay($event)" class="habit-form">
+      <input #commentInput name="comment" class="input-icon" type="text" placeholder="Комментарий" formControlName="comment"/>
+      <img class="icon-comment" [src]="comment" alt="comment">
+      <button name="button" id="add-day-button" class="button input">Готово</button>
+    </form>
+  </div>
+</main>
