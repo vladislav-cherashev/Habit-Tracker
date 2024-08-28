@@ -1,0 +1,33 @@
+<div class="popup" *ngIf="isVisible">
+  <div id="popup-box" class="popup-wrap">
+    <div class="popup-box">
+      <h2 class="h2">Новая привычка</h2>
+      <div class="icon-label">Иконка</div>
+      <div class="icon-select">
+        <button id="sport" class="icon icon_active" (click)="setIcon()">
+          <img [src]="sport" alt="Спорт"/>
+        </button>
+        <button id="water" class="icon" (click)="setIcon()">
+          <img [src]="water" alt="Напитки"/>
+        </button>
+        <button id="food" class="icon" (click)="setIcon()">
+          <img [src]="food" alt="Еда"/>
+        </button>
+      </div>
+      <form class="popup__form" (submit)="addHabit($event)">
+        <input id="input-name" type="text" name="name" placeholder="Название"/>
+        <input id="input-icon"
+               type="text"
+               name="icon"
+               hidden
+               placeholder="Иконка"
+               value="sport"
+        />
+        <input type="number" name="target" placeholder="Цель"/>
+        <button id="submit-add-btn" class="button" type="submit">Добавить</button>
+      </form>
+      <a class="close-btn popup-close" id="close-popup-button" (click)="onTogglePopup()" href="#">x</a>
+    </div>
+</div>
+</div>
+<button (click)="open()">Открыть всплывающее окно</button>

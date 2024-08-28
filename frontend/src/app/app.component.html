@@ -1,10 +1,16 @@
 <body class="body">
 <div class="main-content-side-menu">
-  <app-side-menu [habits]="habitsArray" (eventClick)="selectHabit($event)"></app-side-menu>
+  <app-side-menu [habits]="habitsArray"
+                 (eventSelectHabit)="selectHabit($event)"
+                 (eventAddHabit)="selectHabit($event)"
+  ></app-side-menu>
 </div>
 <div class="main-content">
   <div class="header">
-    <app-header></app-header>
+    <app-header [habit]="currentHabit"
+                [progressCoverBar]="progressCoverBar"
+                [progressPercent]="progressPercent"
+    ></app-header>
   </div>
   <div class="main-content-days">
     <app-main-content-days [days]="habitDays"
@@ -13,4 +19,5 @@
                            (eventDeleteDay)="deleteDay($event)"></app-main-content-days>
   </div>
 </div>
+<app-popup></app-popup>
 </body>

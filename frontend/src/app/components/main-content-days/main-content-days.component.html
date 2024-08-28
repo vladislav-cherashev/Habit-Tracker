@@ -3,7 +3,7 @@
     <div class="habit" *ngFor="let day of days">
       <div class="habit-day">{{ 'День ' + day.number }}</div>
       <div class="habit-comment">{{ day.comment }}</div>
-      <button [id]="day.number" #deleteBtn class="habit-delete-button" (click)="onDeleteDayButtonClick(day.number)">
+      <button [id]="day.number" class="habit-delete-button" (click)="onDeleteDayButtonClick(day.number)">
         <img [src]="delete" alt="Удалить день 2">
       </button>
     </div>

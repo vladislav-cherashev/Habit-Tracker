@@ -7,7 +7,7 @@
           <img src="../../../assets/images/{{habit.icon}}.svg" [alt]="habit.name">
         </button>
       </div>
-      <button id="button-add" class="menu-add">
+      <button id="button-add" class="menu-add" (click)="addHabit()">
         <img [src]="addBtn" alt="Добавить">
       </button>
     </nav>

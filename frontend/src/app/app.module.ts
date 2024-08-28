@@ -9,13 +9,15 @@ import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CrudService } from './services/crud.service';
 import { HttpClientModule } from '@angular/common/http';
+import { PopupComponent } from './components/popup/popup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MainContentDaysComponent,
-    SideMenuComponent
+    SideMenuComponent,
+    PopupComponent
   ],
     imports : [
         BrowserModule,

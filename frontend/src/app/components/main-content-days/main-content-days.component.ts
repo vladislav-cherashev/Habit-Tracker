@@ -1,14 +1,12 @@
 import {
-  AfterContentInit,
-  AfterViewInit,
   ChangeDetectionStrategy,
   Component, ElementRef, EventEmitter,
   Input,
   OnInit, Output,
   ViewChild
 } from '@angular/core';
+
 import { FormControl, FormGroup } from '@angular/forms';
-import { CrudService, Habit } from '../../services/crud.service';
 
 @Component( {
   selector        : 'app-main-content-days',
@@ -18,20 +16,18 @@ import { CrudService, Habit } from '../../services/crud.service';
 } )
 
 export class MainContentDaysComponent implements OnInit {
+
   comment = '../../../assets/images/comment.svg';
 
   delete = '../../../assets/images/delete.svg';
 
   public formGroup! : FormGroup;
 
-  constructor( private crudService : CrudService ) {
-  }
-
   @ViewChild( 'commentInput' ) public commentInput! : ElementRef<HTMLDivElement>;
 
   @ViewChild( 'commentInput' ) public deleteBtn? : ElementRef<HTMLDivElement>;
 
-  @Input() public days? : Array<any> = [];
+  @Input() public days : Array<any> = [];
 
   @Input() public nextDay? : number;
 
@@ -61,6 +57,7 @@ export class MainContentDaysComponent implements OnInit {
     } else {
       this.eventAddDay.emit( comment );
     }
+    this.formGroup.reset( '', comment );
   }
 
   /**

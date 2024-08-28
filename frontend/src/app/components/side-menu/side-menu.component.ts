@@ -12,7 +12,9 @@ export class SideMenuComponent {
 
   @Input() habits? : Habit[];
 
-  @Output() eventClick = new EventEmitter();
+  @Output() eventSelectHabit = new EventEmitter();
+
+  @Output() eventAddHabit = new EventEmitter();
 
   public selectedHabitId : string = '';
 
@@ -27,6 +29,10 @@ export class SideMenuComponent {
   onHabitSelectClick( $event : Event ) : void {
     const selectedHabit = $event.currentTarget as HTMLDivElement;
     this.selectedHabitId = selectedHabit.id;
-    this.eventClick.emit( this.selectedHabitId );
+    this.eventSelectHabit.emit( this.selectedHabitId );
+  }
+
+  addHabit() : void {
+
   }
 }

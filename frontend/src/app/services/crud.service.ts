@@ -16,7 +16,12 @@ export interface Habit {
   icon : string,
   name : string,
   target : number,
-  days : Array<object>,
+  days : Array<Day>
+}
+
+export interface Day {
+  comment: string,
+  number: number,
 }
 
 @Injectable( {
@@ -43,12 +48,12 @@ export class CrudService {
 
   // ReadOne
   getOneHabit( id : any ) : Observable<Habit[]> {
-    return this.http.get<Habit[]>( `${ this.apiUrl }/${id}` );
+    return this.http.get<Habit[]>( `${ this.apiUrl }/${ id }` );
   }
 
   // Update
   updateHabit( id : any, data : any ) : Observable<any> {
-    const API_URL = `${ this.apiUrl }/${id}`;
+    const API_URL = `${ this.apiUrl }/${ id }`;
     return this.http
       .patch( API_URL, data, { headers : this.headers } )
       .pipe( catchError( this.error ) );
@@ -56,7 +61,7 @@ export class CrudService {
 
   // Delete
   deleteHabit( id : any ) : Observable<any> {
-    const API_URL = `${ this.apiUrl }/${id}`;
+    const API_URL = `${ this.apiUrl }/${ id }`;
     return this.http.delete( API_URL ).pipe( catchError( this.error ) );
   }
 

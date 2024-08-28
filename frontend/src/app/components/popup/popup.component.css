@@ -1,0 +1,117 @@
+.popup-wrap {
+  width:      100%;
+  height:     100%;
+  position:   absolute;
+  top:        0px;
+  left:       0px;
+  content:    '';
+  background: rgba(0, 0, 0, 0.85);
+}
+.cover-hidden{
+  display: none;
+}
+.popup-box {
+  width:         1000px;
+  height:        600px;
+  padding:       70px;
+  transform:     translate(-50%, -50%) scale(0.5);
+  position:      absolute;
+  top:           50%;
+  left:          50%;
+  box-shadow:    0px 2px 16px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  background:    #fff;
+  text-align:    center;
+
+  .close-btn {
+    width:              35px;
+    height:             35px;
+    display:            inline-block;
+    position:           absolute;
+    top:                10px;
+    right:              10px;
+    -webkit-transition: all ease 0.5s;
+    transition:         all ease 0.5s;
+    border-radius:      1000px;
+    background:         #d75f70;
+    font-weight:        bold;
+    text-decoration:    none;
+    color:              #fff;
+    line-height:        190%;
+
+    &:hover {
+      -webkit-transform: rotate(180deg);
+      transform:         rotate(180deg);
+    }
+  }
+}
+
+.popup__form{
+  display: flex;
+  flex-direction: column;
+  gap:            15px;
+  align-items:    center;
+}
+
+.transform-in, .transform-out {
+  display:            block;
+  -webkit-transition: all ease 0.5s;
+  transition:         all ease 0.5s;
+}
+
+.transform-in {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  transform:         translate(-50%, -50%) scale(1);
+}
+
+.transform-out {
+  -webkit-transform: translate(-50%, -50%) scale(0.5);
+  transform:         translate(-50%, -50%) scale(0.5);
+}
+
+.h2{
+  font-size: 55px;
+}
+
+.icon-label {
+  font-size: 40px;
+  line-height: 16px;
+  color: #768396;
+  margin-bottom: 10px;
+}
+
+.icon-select {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.icon {
+  border: 1px solid #5051F9;
+  border-radius: 14px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.icon_active {
+  background: #5051F9;
+}
+
+.icon:hover {
+  background: #6A6AFB;
+}
+
+.icon:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.icon_active img {
+  filter: brightness(0) invert(1);
+}
